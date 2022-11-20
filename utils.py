@@ -4,7 +4,7 @@ from discord import Color, Member, Guild, Emoji
 
 import requests
 
-from config import allowed_users, allowed_roles, color_role_name, color_role_position
+from settings import allowed_users, allowed_roles, color_role_name, color_role_position
 
 
 def _allowed_role(member):

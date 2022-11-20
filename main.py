@@ -2,7 +2,7 @@ import os
 
 from discord_bot import discord_bot
 
-from config import DEBUG
+from settings import DEBUG
 
 
 if __name__ == '__main__':

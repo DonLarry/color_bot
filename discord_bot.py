@@ -5,7 +5,7 @@ from discord.ext import commands
 
 from utils import allowed_member, get_hexadecimal_color, get_rgb_color, add_color_role, remove_color_role
 
-from config import server_id, color_role_name, reaction_emoji_id, color_role_position, colors_channel_id, allowed_users
+from settings import server_id, color_role_name, reaction_emoji_id, color_role_position, colors_channel_id, allowed_users
 
 
 class Bot(commands.Bot):

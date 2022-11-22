@@ -4,7 +4,7 @@ from discord import Color, Member, Guild, Emoji
 
 import requests
 
-from settings import allowed_users, allowed_roles, color_role_name, color_role_position
+from settings import allowed_users, allowed_roles, color_role_name, color_role_position, permanent_colors
 
 
 def _allowed_role(member):
@@ -76,7 +76,8 @@ async def remove_color_role(member: Member, guild: Guild):
 
     # Remove the non-used color roles
     for role in _get_non_used_color_roles(guild.roles):
-        await role.delete()
+        if role.color.to_rgb() not in permanent_colors:
+            await role.delete()
 
 
 async def add_color_role(member: Member, color: Color, guild: Guild):
